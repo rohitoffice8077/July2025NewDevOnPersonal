@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Download XlS Files">
+        <div if:true={accountData}>
+            <lightning-button variant="brand" icon-name="utility:download" label="Download" onclick={handleDownload}></lightning-button>
+        <lightning-datatable data={accountData} columns={columns} key-field="Id"></lightning-datatable>
+        </div>
+    </lightning-card>
+    
+</template>

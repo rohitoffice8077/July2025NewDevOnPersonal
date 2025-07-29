@@ -1,0 +1,6 @@
+<apex:page >
+    <apex:pageblock >
+    <apex:pageMessage summary="The message,severity and strength working fine" severity="confirm" strength="3"></apex:pageMessage>
+    
+    </apex:pageblock>
+</apex:page>

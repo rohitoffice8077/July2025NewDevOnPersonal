@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title='Input AND Table' icon-name='utility:user'>
+        <div class='slds-var-m-around_medium'>
+            <lightning-input name="full name" label="Full Name" onchange={handlechange}></lightning-input>
+            <lightning-input type="number" name="phone" lable="Phone" onchange={handlechange}></lightning-input>
+            <lightning-input type="email" name="email" lable="Email" onchange={handlechange}></lightning-input>
+        </div>
+        <div style="padding:10px">
+            <table border="1">
+                <tr>
+                    <td>Full Name</td>
+                    <td>{fullname}</td>
+                </tr>
+                <tr>
+                    <td>Phone</td>
+                    <td>{phone}</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>{email}</td>
+                </tr>
+                
+            </table>
+        </div>
+    </lightning-card>
+
+
+    
+</template>

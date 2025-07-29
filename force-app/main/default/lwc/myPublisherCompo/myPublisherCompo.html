@@ -1,0 +1,7 @@
+<template>
+    <lightning-card title="My Publisher">
+        <div if:true={accountData}>
+        <lightning-datatable data={accountData} columns={columns} key-field="Id" onrowselection={handldeSelection} max-row-selection="1"></lightning-datatable>
+        </div>
+    </lightning-card>
+</template>

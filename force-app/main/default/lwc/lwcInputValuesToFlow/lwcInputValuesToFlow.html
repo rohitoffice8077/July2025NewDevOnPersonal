@@ -1,0 +1,6 @@
+<template>
+    <lightning-card title="LWC VALUES TO FLOW">
+        <lightning-input label="Want To Change Rating" type="checkbox" onchange={handleChange}></lightning-input>
+    </lightning-card>
+    <lightning-flow if:true={isChange} flow-api-name="changeRating" flow-input-variables={flowVariables} onstatuschange={handleflowstatuschange}></lightning-flow>
+</template>

@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Datatable Example" icon-name="custom:custom63">
+        <div if:true={isLoaded} class="slds-is-relative">
+            <lightning-spinner
+                alternative-text="Loading..." variant="brand">
+            </lightning-spinner>
+        </div>
+        <div class="slds-m-around_medium">
+            <template lwc:if={accountsData}>
+                <lightning-datatable
+                    key-field="Id"
+                    data={accountsData}
+                    columns={columns}
+                    onsave={handleSave}
+                    draft-values={draftValues}
+                    onrowaction={callRowAction}>
+                </lightning-datatable>
+            </template>
+            <template lwc:if={accounts.error}>
+                <!-- handle Apex error -->
+            </template>
+        </div>
+    </lightning-card>
+</template>

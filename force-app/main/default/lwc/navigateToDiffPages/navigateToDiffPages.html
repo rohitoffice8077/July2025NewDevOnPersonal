@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="Navigation To Different Pages" icon-name="utility:user">
+        <div class="slds-var-m-around_medium">
+            <lightning-button
+            label="Navigation To Home"
+            class="slds-var-m-around_medium"
+            onclick={navigateToHome}
+            ></lightning-button>
+            <br/><br/>
+            <lightning-button
+            label="Navigation To New Contact"
+            class="slds-var-m-around_medium"
+            onclick={navigateToNewContact}
+            ></lightning-button>
+            <br/><br/>
+            <lightning-button
+            label="Navigation To New Contact with Default"
+            class="slds-var-m-around_medium"
+            onclick={navigateToNewContactWithDefault}
+            ></lightning-button>
+            <br/><br/>
+            <lightning-button
+            label="Navigation To Contact ListView"
+            class="slds-var-m-around_medium"
+            onclick={navigateToContactListView}
+            ></lightning-button>
+            <br/><br/>
+            <lightning-button
+            label="Navigation To Tab"
+            class="slds-var-m-around_medium"
+            onclick={navigateToTab}
+            ></lightning-button>
+        </div>
+    </lightning-card>
+    
+</template>

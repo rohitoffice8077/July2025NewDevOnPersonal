@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Hello brother i am fine" icon-name="utility:user">
+        <div>
+            my value is ={myvalue}
+        </div>
+        <div>
+            <lightning-input label="Click me" type="checkbox" onchange={handlechange}>
+
+            </lightning-input>
+        </div>
+        <div if:false={showme}>
+            i am not visible
+
+        </div>
+        <div if:true={showme}>
+            i am visible
+
+        </div>
+
+    </lightning-card>
+    
+</template>

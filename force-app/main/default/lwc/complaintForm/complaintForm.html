@@ -1,0 +1,353 @@
+<template>
+    <section class="center" style="width:70%;">
+        <img src={cpLogo}>
+        <br>
+        <h1 style="font-size:24px ;">LANGUAGE ACCESS COMPLAINT FORM</h1>
+        <p>San Francisco is committed to providing all residents with fair access to City services, regardless of the
+            language they speak.</p>
+        <br>
+        <p>The Office of Civic Engagement and Immigrant Affairs (OCEIA) oversees language access across the City. We
+            work with departments to make their services accessible in other languages</p>
+        <br>
+        <p>We make sure that public-serving City departments:</p>
+        <br />
+        <p>- Inform residents of their right to ask for interpretation or translation</p>
+        <p>- Translate written materials and signs into Chinese, Filipino, and Spanish</p>
+        <p>- Provide access to staff that speak these languages</p>
+        <br />
+        <p>If a department does not follow these rules, you may report them. Fill out this form to submit a complaint.
+        </p>
+        <br>
+        <p>You can file a complaint without giving your name. But if you don’t give us your name we cannot ask you
+            questions or tell you what happened with your complaint.</p>
+        <br>
+        <p>For questions or support, please contact us: <a class="lnk">language.access@sfgov.org</a></p>
+        <br>
+        <br>
+        <div class="slds-panel slds-size_100% slds-panel_docked slds-panel_docked-left slds-is-open" aria-hidden="false"
+            style="height:auto;border-color:#ddd">
+            <div style="padding:15px;">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Today's Date</th>
+                            <th class="slds-panel slds-size_small slds-panel_docked slds-panel_docked-left slds-is-open"
+                                style="text-align:center;background-color:#f5f5f5;">
+                                <strong>{date1}</strong>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br>
+        <div class="slds-panel slds-size_100% slds-panel_docked slds-panel_docked-left slds-is-open" aria-hidden="false"
+            style="height:auto;border-color:#ddd">
+            <div class="slds-panel__header" style="background-color:#f5f5f5;">
+                <h1>
+                    <p>CONTACT INFORMATION</p>
+                    <p>We recommend you include your contact information, so we can follow up with you.</p>
+                </h1>
+            </div>
+            <div class="slds-form-element">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>First Name:</strong>
+                                <lightning-input type="text" variant="label-hidden" class="slds-form-element__label"
+                                    label="First Name:">
+                                </lightning-input>
+                            </td>
+                            <td>
+                                <strong>Last Name:</strong>
+                                <lightning-input type="text" variant="label-hidden" class="slds-form-element__label"
+                                    label="Last Name:">
+                                </lightning-input>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Email Address:</strong>
+                                <lightning-input type="email" variant="label-hidden" class="slds-form-element__label"
+                                    placeholder="xxx@xxxx.xxx" label="Email Address:">
+                                </lightning-input>
+                            </td>
+                            <td>
+                                <strong>Phone Number:</strong>
+                                <lightning-input type="tel" variant="label-hidden" class="slds-form-element__label"
+                                    placeholder="xxx-xxx-xxxx" label="Phone Number:">
+                                </lightning-input>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Street Address:</strong>
+                                <lightning-input type="text" variant="label-hidden" class="slds-form-element__label"
+                                    label="Street Address:">
+                                </lightning-input>
+                            </td>
+                            <td>
+                                <strong>City:</strong>
+                                <lightning-input type="text" variant="label-hidden" class="slds-form-element__label"
+                                    label="City:">
+                                </lightning-input>
+                            </td>
+                            <td>
+                                <strong>State:</strong>
+                                <lightning-input type="text" variant="label-hidden" class="slds-form-element__label"
+                                    label="State:">
+                                </lightning-input>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Zip code:</strong>
+                                <lightning-input type="text" variant="label-hidden" class="slds-form-element__label"
+                                    label="Zip code:">
+                                </lightning-input>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br>
+        <div class="slds-panel slds-size_100% slds-panel_docked slds-panel_docked-left slds-is-open" aria-hidden="false"
+            style="height:auto;border-color:#ddd">
+            <h1>Do you give OCEIA permission to share your name and contact information with the involved Department?
+            </h1>
+            <lightning-radio-group name="radioGroup" variant="label-hidden" label="Radio Group" options={options3}
+                value={value2} onchange={handleRadioChange} type="radio"></lightning-radio-group>
+        </div>
+        <br>
+        <div class="slds-panel slds-size_100% slds-panel_docked slds-panel_docked-left slds-is-open" aria-hidden="false"
+            style="height:auto;border-color:#ddd">
+            <div class="slds-panel__header" style="background-color:#f5f5f5;">
+                <h1>COMPLAINT DETAILS</h1>
+            </div>
+            <div class="slds-form-element">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Date of Incident:</strong>
+                                <lightning-input type="date" variant="label-hidden" class="slds-form-element__label"
+                                    label="Date of Incident:">
+                                </lightning-input>
+                            </td>
+                            <td>
+                                <strong>Time of Incident (if known):</strong>
+                                <lightning-radio-group name="radioGroup2" variant="label-hidden"
+                                    class="slds-form-element__label" label="Radio Group2" options={options4}
+                                    value={value3} onchange={handleRadioChange2} type="radio">
+                                </lightning-radio-group>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Involved City Department/Office:</strong>
+                                <lightning-combobox name="progress" variant="label-hidden"
+                                    label="Involved City Department/Office:" value={value1}
+                                    placeholder="--Please Select--" options={options1} onchange={handleChange1}>
+                                </lightning-combobox>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br>
+        <div class="slds-panel slds-size_100% slds-panel_docked slds-panel_docked-left slds-is-open" aria-hidden="false"
+            style="height:auto;border-color:#ddd">
+            <div class="slds-panel__header" style="background-color:#f5f5f5;">
+                <h1>LOCATION OF INCIDENT</h1>
+            </div>
+            <div class="slds-form-element">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Street Address:</strong>
+                                <lightning-input type="text" variant="label-hidden" class="slds-form-element__label"
+                                    label="Street Address:">
+                                </lightning-input>
+                            </td>
+                            <td>
+                                <strong>City:</strong>
+                                <lightning-input type="text" variant="label-hidden" class="slds-form-element__label"
+                                    label="City:">
+                                </lightning-input>
+                            </td>
+                            <td>
+                                <strong>State:</strong>
+                                <lightning-input type="text" variant="label-hidden" class="slds-form-element__label"
+                                    label="State:">
+                                </lightning-input>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Zip code:</strong>
+                                <lightning-input type="text" variant="label-hidden" class="slds-form-element__label"
+                                    label="Zip code:">
+                                </lightning-input>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br>
+        <div class="slds-panel slds-size_100% slds-panel_docked slds-panel_docked-left slds-is-open" aria-hidden="false"
+            style="height:auto;border-color:#ddd">
+            <div class="slds-panel__header" style="background-color:#f5f5f5;">
+                <h1>INCIDENT DESCRIPTION</h1>
+            </div>
+            <div class="slds-form-element">
+                <p><strong>Language Access Issues (check all that apply)</strong></p>
+                <p>
+                    <lightning-input type="Checkbox"
+                        label="I was not informed about the availability of language services"></lightning-input>
+                </p>
+                <p>
+                    <lightning-input type="Checkbox"
+                        label="I was not informed about the availability of language services"></lightning-input>
+                </p>
+                <p>
+                    <lightning-input type="Checkbox"
+                        label="I was not informed about the availability of language services"></lightning-input>
+                </p>
+                <p>
+                    <lightning-input type="Checkbox"
+                        label="Lack of translated materials (such as forms, notices of eligibility for services, or benefits">
+                    </lightning-input>
+                </p>
+                <p>
+                    <lightning-input type="Checkbox"
+                        label="Lack of translated, publicly-posted information aboutdepartment services or programs">
+                    </lightning-input>
+                </p>
+                <p>
+                    <lightning-input type="Checkbox" label="Poor quality of translated materials"></lightning-input>
+                </p>
+                <p>
+                    <lightning-input type="Checkbox"
+                        label="Lack of bilingual employees or interpreters to providehelp in my language">
+                    </lightning-input>
+                </p>
+                <p>
+                    <lightning-input type="Checkbox"
+                        label="Employee or interpreter had inadequate proficiency in my languages"></lightning-input>
+                </p>
+                <p>
+                    <lightning-input type="Checkbox" label="Lack of recorded telephone messages in my language">
+                    </lightning-input>
+                </p>
+                <p>
+                    <lightning-input type="Checkbox" label="Other (please specify)"></lightning-input>
+                </p>
+                <br>
+                <strong>What language did you need help with?</strong>
+                <lightning-combobox name="progress" variant="label-hidden" label="What language did you need help with?"
+                    value={value} placeholder="--Please Select--" options={options} onchange={handleChange}>
+                </lightning-combobox>
+                <br>
+                <p><strong>Please provide a description. Include details such as the name(s) or position(s) of any
+                        relevant
+                        individuals and the type of services/information that you were seeking.</strong></p>
+                <lightning-textarea name="form-element-23"></lightning-textarea>
+                <br>
+                <h1>Did you receive your desired service from the department</h1>
+                <lightning-radio-group name="radioGroup3" variant="label-hidden" label="Radio Group3" options={options5}
+                    value={value4} onchange={handleRadioChange3} type="radio"></lightning-radio-group>
+            </div>
+        </div>
+        <br>
+        <div if:true={desShow} class="slds-panel slds-size_100% slds-panel_docked slds-panel_docked-left slds-is-open"
+            aria-hidden="false" style="height:200px;border-color:#ddd">
+            <div class="slds-panel__header" style="background-color:#f5f5f5;">
+                <h1>DESIRED OUTCOME</h1>
+            </div>
+            <div class="slds-form-element">
+                <h1>How would you like to see this issue resolved? For example, would you like to have a follow-up
+                    meeting with the department involved, a follow-up phone call, or other resolution? Please provide a
+                    short description.</h1>
+                <lightning-textarea name="form-element-26"></lightning-textarea>
+            </div>
+        </div>
+        <br>
+        <div class="slds-panel slds-size_100% slds-panel_docked slds-panel_docked-left slds-is-open" aria-hidden="false"
+            style="height:auto;border-color:#ddd">
+            <div class="slds-panel__header" style="background-color:#f5f5f5;">
+                <h1>FORM ASSISTANCE</h1>
+            </div>
+            <div class="slds-form-element">
+                <h1>Did someone help you fill out this form?</h1>
+                <lightning-radio-group name="radioGroup4" variant="label-hidden" label="Radio Group4" options={options6}
+                    value={value5} onchange={handleRadioChange4} type="radio"></lightning-radio-group>
+            </div>
+
+            <br>
+            <div if:true={gotHelp}>
+                <h1>I got help from:</h1>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Name:</strong>
+                                <lightning-input type="text" class="slds-form-element__label" variant="label-hidden"
+                                    label="Name:">
+                                </lightning-input>
+                            </td>
+                            <td>
+                                <strong>Department/Organization:</strong>
+                                <lightning-input type="text" variant="label-hidden" class="slds-form-element__label"
+                                    label="Department/Organization:">
+                                </lightning-input>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Email Address:</strong>
+                                <lightning-input type="email" class="slds-form-element__label" variant="label-hidden"
+                                    label="Email Address:">
+                                </lightning-input>
+                            </td>
+                            <td><strong>Phone Number:</strong>
+                                <lightning-input type="tel" class="slds-form-element__label" variant="label-hidden"
+                                    label="Phone Number:">
+                                </lightning-input>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br>
+        <div class="slds-panel slds-size_100% slds-panel_docked slds-panel_docked-left slds-is-open" aria-hidden="false"
+            style="height:100px;border-color:#ddd;vertical-align:center;">
+            <div class="vertical-center" style="text-align:center;">
+                <lightning-button variant="success" label="Sumbit" onclick={handleClick}></lightning-button>
+            </div>
+        </div>
+        <br>
+        <p style="text-align:center;">Office of Civic Engagement and Immigrant Affairs (OCEIA)</p>
+        <br>
+        <p style="text-align:center;"><strong>Contact:</strong><a class="lnk">language.access@sfgov.org</a> |
+            415-581-2360</p>
+    </section>
+
+</template>

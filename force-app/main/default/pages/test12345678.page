@@ -1,0 +1,61 @@
+<apex:page standardController="Account" renderAs="pdf">
+    <table style="font-family:sans-serif; padding-bottom: 30px;">
+        <tr>
+            <!-- <td><apex: image id="logo2" value="{!account.Name}" width="60" height="60"/></td> --->
+            <td style="font:24pt; padding-left: 10px; padding-right: 250px;">Quote Number</td>
+            <td style="font:24pt;">Quote</td>
+        </tr>
+    </table>
+        <table style="border:0.5px solid #fff; font-family:sans-serif;">
+        <tr>
+            <td style="padding-right:450px;"><apex:outputField value="{!Account.BillingStreet}"/></td>
+            <td style="test-align:right; padding-right:20px;">Date</td>
+            <td style="text-align:right; "><apex:outputText value="{!Account.Name}"/></td>
+        </tr>
+        
+        <tr>
+            <td><apex:outputField value="{!Account.BillingCity}"/>, <span> <apex:outputField value="{!Account.BillingPostalCode}"/> </span></td>
+
+            <td style="text-align:right; padding-right:20px;">Quote# </td>
+            <td style="text-align:right;"> <apex:outputText value="{!Account.Name}"/></td>        
+        </tr>
+        
+        <tr>
+            <td><apex:outputField value="{!Account.Phone}"/></td>
+            <td style="text-align:right; padding-right:20px;">Due Date</td>
+            <td style="text-align:right; "><apex:outputText value="{!Account.CreatedDate}"/></td>
+        </tr>
+        <tr>
+            <td><apex:outputField value="{!Account.Website}"/></td>
+            </tr>
+            <tr>
+            <td><apex:outputField value="{!Account.Website}" /></td>
+            </tr>
+            
+    </table>
+        <br></br>
+      <table style="border:0.5px solid #fff; font-family:sans-serif;">
+          <tr style="color:#fff; background-color:#ff4500;">
+            <th style="padding-left:5px; padding-right:170px;">BILL TO</th>
+            <th style="background-color:#fff;">BLANK COL</th>
+            <th style="padding-left:5px; padding-right:170px;">SHIP TO</th>
+        </tr>
+        <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        </tr>
+        <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        </tr>
+        <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        </tr>
+        
+
+    </table>
+</apex:page>

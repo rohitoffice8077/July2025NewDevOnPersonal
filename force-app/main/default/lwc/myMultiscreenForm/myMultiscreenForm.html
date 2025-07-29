@@ -1,0 +1,34 @@
+<template>
+    <template if:true={showScreen1}>
+      <!-- Screen 1: Name -->
+      <lightning-card title="Screen 1: Personal Details">
+        <lightning-input label="Name" value={data.Name} onchange={handleChange}></lightning-input>
+        <lightning-input label="Email" value={data.Email} onchange={handleChange}></lightning-input>
+        <lightning-input label="Phone" value={data.PhoneNumber} onchange={handleChange}></lightning-input>
+        <lightning-button label="Next" onclick={next}></lightning-button>
+      </lightning-card>
+    </template>
+    
+    <template if:true={showScreen2}>
+      <!-- Screen 2: Email -->
+      <lightning-card title="Screen 2: Education Details">
+        <lightning-input label="Education Details" value={data.EducationDetails} onchange={handleChange}></lightning-input>
+        <lightning-button label="Previous" onclick={previous}></lightning-button>
+        <lightning-button label="Next" onclick={next}></lightning-button>
+      </lightning-card>
+    </template>
+    
+    <template if:true={showScreen3}>
+      <!-- Screen 3: Phone -->
+      <lightning-card title="Screen 3: Employment Details">
+        <lightning-input label="Employment Details" value={data.EmploymentDetails} onchange={handleChange}></lightning-input>
+        <lightning-button label="Previous" onclick={previous}></lightning-button>
+        <lightning-button label="Submit" onclick={submit}></lightning-button>
+      </lightning-card>
+    </template>
+    
+    <template if:true={showSuccessMessage}>
+      <!-- Success Message -->
+      <p>Record created successfully!</p>
+    </template>
+  </template>

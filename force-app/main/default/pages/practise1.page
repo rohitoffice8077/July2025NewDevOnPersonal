@@ -1,0 +1,10 @@
+<apex:page >
+    <div style="text-align:center;">
+    <h1>
+        hiii everyone my name is rohit<br/>
+        i am good at coding<br/>
+        so please don't try at home<br/>
+        {!$User.FirstName}
+    </h1>
+            </div>
+</apex:page>

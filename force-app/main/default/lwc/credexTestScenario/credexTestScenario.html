@@ -1,0 +1,26 @@
+<template>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Industry</th>
+                <th>Owner</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <template for:each={accounts} for:item="account">
+                <tr key={account.Id}>
+                    <td>{account.Name}</td>
+                    <td>{account.Industry}</td>
+                    <td>{account.Owner.Name}</td>
+                    <td>
+                        <lightning-button label="Delete" value={account.Id}  onclick={handleDelete} class="slds-m-left_x-small"></lightning-button>
+                        <lightning-button label="Edit" value={account.Id} onclick={handleEdit} class="slds-m-left_x-small"></lightning-button>
+                        <lightning-button label="Change Owner" value={account.Id} onclick={handleChangeOwner} class="slds-m-left_x-small"></lightning-button>
+                    </td>
+                </tr>
+            </template>
+        </tbody>
+    </table>
+</template>

@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Spinner Loading" icon-name="Utility:user">
+        <template if:true={load}>
+        <div class="loader">
+            <div class="inner one"></div>
+            <div class="inner two"></div>
+            <div class="inner three"></div>
+          </div>
+          </template>
+          <lightning-button label="Click" onclick={handleClick}></lightning-button>
+    </lightning-card>
+    
+</template>

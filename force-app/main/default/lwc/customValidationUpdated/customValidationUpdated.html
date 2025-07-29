@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Sign up">
+        <p class="slds-var-p-around_small">
+            <lightning-layout multiple-rows>
+                <lightning-layout-item padding="around-small" size="12" medium-device-size="6" large-device-size="6">
+                    <lightning-input name="firstname" data-id="firstname" label="First Name" class="validate"  type="text" required></lightning-input>
+                    <lightning-input name="password" data-id="password" label="Password" class="validate"  type="password" required></lightning-input>
+                    <lightning-input name="email" data-id="email" label="Email" class="validate"  type="email" required></lightning-input>
+                    <lightning-combobox name="country" data-id="country" label="Country" class="validate"  type="email" options={countryOptions} required></lightning-combobox>
+                    <lightning-input name="startdate" data-id="startdate" label="Start Date" class="validate"  type="date" required onchange={handleChange}></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="12" medium-device-size="6" large-device-size="6">
+                    <lightning-input name="lastname" data-id="lastname" label="Last Name" class="validate"  type="text" required></lightning-input>
+                    <lightning-input name="company" data-id="company" label="Company" class="validate"  type="text" required></lightning-input>
+                    <lightning-input name="phone" data-id="phone" label="Phone" class="validate"  type="phone" required></lightning-input>
+                    <lightning-input name="pincode" data-id="pincode" label="Pin Code" class="validate"  type="number"></lightning-input>
+                    <lightning-input name="enddate" data-id="enddate" label="End Date" class="validate"  type="date" required onchange={handleChange}></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" class="slds-var-p-top_small">
+                    <lightning-button class="slds-align_absolute-center" label="Sign up" varinat="Neutral" onclick={createContact}></lightning-button>
+                </lightning-layout-item>
+            </lightning-layout>
+        </p>
+    </lightning-card>    
+</template>

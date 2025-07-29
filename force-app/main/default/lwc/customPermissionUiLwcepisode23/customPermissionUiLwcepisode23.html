@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Custom Permission Lwc UI" icon-name="utility:user">
+        <div if:true={checkAccess} style="padding:10px;">
+            I am Available
+        </div>
+        <div if:false={checkAccess} style="padding:10px;">
+            I am not Available
+        </div>
+        
+
+    </lightning-card>
+    
+</template>

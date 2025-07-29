@@ -1,0 +1,17 @@
+<apex:page Controller="Redirect_Main2" action="{!Redirect_Main}">
+<apex:form >
+<apex:pageBlock >
+<apex:pageBlockTable value="{!cont}" var="a" >
+<apex:column value="{!a.Email}"/>
+<apex:column value="{!a.Name}"/>
+<apex:column value="{!a.Phone}"/>
+<apex:column id="three">
+<apex:commandButton value=" Edit " onclick="window.open('/{!a.id}')" reRender="three"/>
+
+
+<!--/e?retURL=%2F{!a.id}&_CONFIRMATIONTOKEN=VmpFPSxNakF4Tmkwd055MHlPVlF3T1Rvek5qb3dPQzQ0TnpaYSxvTFl3eklmdmNBcjl6RlVDeDRWUnBtLE9XWTJNbU01&common.udd.actions.ActionsUtilORIG_URI=%2F{!a.id}%2Fe')" reRender="two"/>
+--> </apex:column>
+</apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

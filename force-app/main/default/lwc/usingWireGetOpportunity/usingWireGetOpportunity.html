@@ -1,0 +1,7 @@
+<template>
+    <lightning-card title="Display Opportunity data using wire">
+        <template for:each={data} for:item="opportunity">
+            <p key={opportunity.id}>{opportunity.Name}</p>
+        </template>
+    </lightning-card>
+</template>

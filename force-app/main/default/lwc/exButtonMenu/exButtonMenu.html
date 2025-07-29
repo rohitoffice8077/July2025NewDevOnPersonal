@@ -1,0 +1,30 @@
+<template>
+    <div class="slds-m-top_medium slds-m-bottom_x-large">
+        <h2 class="slds-text-heading_small slds-m-bottom_medium">
+            Button menu with only <code>lightning-menu-item</code> elements.
+        </h2>
+
+        <!-- Simple -->
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-button-menu alternative-text="Show menu" onselect={handleSelect} >
+                <template for:each={menuItemValuesPrior} for:item="menuvalue1" > 
+                <lightning-menu-item  
+                        label={menuvalue1.label}
+                        value={menuvalue1.value}
+                        key={menuvalue1.value}
+                        checked
+                        >
+                    </lightning-menu-item>
+                </template>
+                <template for:each={menuItemValues} for:item="menuvalue" >         
+                    <lightning-menu-item  
+                        label={menuvalue.label}
+                        value={menuvalue.value} 
+                        key={menuvalue.value}
+                        >
+                    </lightning-menu-item>
+                    </template>
+            </lightning-button-menu>
+        </div>
+    </div>
+</template>

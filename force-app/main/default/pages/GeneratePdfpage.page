@@ -1,0 +1,126 @@
+<apex:page standardController="Quote" contentType="application/pdf" showHeader="false" sidebar="false" renderAs="pdf">
+    <form>         
+        <div>
+            <div>
+                <label>Company Address &nbsp;</label>
+                <span>{!Quote.Opportunity.Account.BillingStreet},
+                    {!Quote.Opportunity.Account.BillingCity}, 
+                    {!Quote.Opportunity.Account.BillingState},
+                    {!Quote.Opportunity.Account.BillingPostalCode}
+                </span>
+            </div>
+            
+            <div>
+                <label>Created Date &nbsp;</label>
+                <span>{!Quote.CreatedDate}</span>
+            </div>
+            
+            <br/><br/>
+            
+            <div>
+                <label>Expiration Date &nbsp;</label>
+                <span>{!Quote.ExpirationDate}</span>
+            </div>
+            
+            <br/>
+            
+            <div>
+                <label>Quote Number &nbsp;</label>
+                <span>{!Quote.QuoteNumber}</span>
+            </div>
+            
+            <div>
+                <label>Prepared By &nbsp;</label>
+                <span>{!Quote.CreatedBy.Name}</span>
+            </div>
+            
+            <div>
+                <label>Contact Name &nbsp;</label>
+                <span>{!Quote.ContactId}</span>
+            </div>
+            
+            <div>
+                <label>Email &nbsp;</label>
+                <span>{!Quote.CreatedBy.Email}</span>
+            </div>
+            
+            <div>
+                <label>Email &nbsp;</label>
+                <span>{!Quote.Email}</span>
+            </div>
+            
+            <div>
+                <label>Bill To Name &nbsp;</label>
+                <span>{!Quote.BillingName}</span>
+            </div>
+            
+            <div>
+                <label>Ship To Name &nbsp;</label>
+                <span>{!Quote.ShippingName}</span>
+            </div>
+        </div>
+        
+        <br/><br/>
+        
+        <div>
+            <br/>
+            <div>
+                <label>Subtotal &nbsp;</label>
+                <span>{!Quote.Subtotal}</span>
+            </div>
+            
+            <br/>
+            
+            <div>
+                <label>Discount &nbsp;</label>
+                <span>{!Quote.Discount}</span>
+            </div>
+            
+            <br/>
+            
+            <div>
+                <label>Total Price &nbsp;</label>
+                <span>{!Quote.TotalPrice}</span>
+            </div>
+            
+            <br/>
+            
+            <div>
+                <label>Grand Total &nbsp;</label>
+                <span>{!Quote.GrandTotal}</span>
+            </div>
+        </div>
+        
+        <div class="red">
+            <div>
+                <h3>Quote Acceptance Information</h3>
+                
+                <div>
+                    <label>Signature &nbsp;</label>
+                    <span>..............................</span>
+                </div>
+                
+                <br/>
+                
+                <div>
+                    <label>Name &nbsp;</label>
+                    <span>..............................</span>
+                </div>
+                
+                <br/>
+                
+                <div>
+                    <label>Title &nbsp;</label>
+                    <span>..............................</span>
+                </div>
+                
+                <br/>
+                
+                <div>
+                    <label>Date &nbsp;</label>
+                    <span>..............................</span>
+                </div>
+            </div>
+        </div>
+    </form>
+</apex:page>

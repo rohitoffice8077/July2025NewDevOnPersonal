@@ -1,0 +1,40 @@
+<template>
+    <lightning-card title=" Compound Intrest calculator">
+        <lightning-layout multiple-rows>
+            
+            <lightning-layout-item size="12" padding="around-medium">
+                <lightning-input type="number" label="Enter Principal" onchange={Principalchangehandler}></lightning-input>
+
+
+            </lightning-layout-item>
+            <lightning-layout-item size="12" padding="around-medium">
+                <lightning-input type="number" label="Enter Number Of Year" onchange={Timechangehandler}></lightning-input>
+
+
+            </lightning-layout-item>
+            <lightning-layout-item size="12" padding="around-medium">
+                <lightning-input type="number" label="Enter Rate Of Intrest" onchange={Ratechangehandler}></lightning-input>
+
+
+            </lightning-layout-item>
+            <lightning-layout-item size="12" padding="around-medium">
+                <lightning-input type="number" label="Enter compound" onchange={Compoundchangehandler}></lightning-input>
+
+
+            </lightning-layout-item>
+        
+            <lightning-layout-item size="12" padding="around-medium">
+                <lightning-button label="Calculate CI" icon-position="center" onclick={Calculatesihandler}></lightning-button>
+
+
+            </lightning-layout-item>
+            <lightning-layout-item size="12" padding="around-medium">
+                <lightning-formatted-text value={currentoutput}></lightning-formatted-text>
+
+
+            </lightning-layout-item>
+        </lightning-layout>
+
+    </lightning-card>
+    
+</template>

@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="My Subscriber">
+        <template for:each={caseData} for:item="cas">
+            <lightning-card key={cas.Id} title={cas.CaseNumber} icon-name="standard:case">
+                <div>
+                    Case No : {cas.CaseNumber}
+                    Account : {cas.Account.Name}
+                    Status  : {cas.Status}
+                    Origin  : {cas.Origin}
+                </div>
+            </lightning-card>
+        </template>
+    </lightning-card>
+    
+</template>

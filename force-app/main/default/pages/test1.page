@@ -1,0 +1,37 @@
+<apex:page >
+     <apex:form >
+         <apex:pageMessage summary="Testing Page Message" severity="confirm" strength="3"></apex:pageMessage>
+    <apex:pageblock title="Title For Page Block Section">
+         <apex:pageblockbuttons >
+        <apex:commandButton value="Save"></apex:commandButton>
+             <apex:commandButton value="Cancel"></apex:commandButton>
+                </apex:pageblockbuttons>
+    <apex:pageBlockSection title="First Section">
+        <apex:pageBlockSectionItem >1st Iteam</apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >2nd Iteam</apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >3rd Iteam</apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >4th Iteam</apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >5th Iteam</apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Second Section">
+        <apex:pageBlockSectionItem >1st Iteam</apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >2nd Iteam</apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >3rd Iteam</apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >4th Iteam</apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >5th Iteam</apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Third Section">
+            <apex:pageBlockSectionItem >Testing Input Text<apex:inputtext /></apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >Testing Input Secret<apex:inputSecret /></apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >Testing Input Text Area<apex:inputtextArea /></apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >Testing Input CheckBox<apex:inputCheckBox /></apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Fourth Section">
+            <apex:pageBlockSectionItem ><apex:outputLabel Value="Enter Name" for="name"></apex:outputLabel><apex:inputtext id="name"/></apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem ><apex:outputLabel Value="Enter Username" for="username"></apex:outputLabel><apex:inputtext id="username"/></apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem ><apex:outputLabel Value="Enter Password" for="password"></apex:outputLabel><apex:inputSecret id="password"/></apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem ><apex:outputLink value="www.google.com">Salesforce</apex:outputLink></apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+    </apex:pageblock>
+         </apex:form>
+</apex:page>

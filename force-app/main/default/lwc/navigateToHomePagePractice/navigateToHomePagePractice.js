@@ -1,0 +1,136 @@
+import { LightningElement,wire } from 'lwc';
+import {NavigationMixin} from 'lightning/navigation';
+import {encodeDefaultFieldValues} from 'lightning/pageReferenceUtils';
+import {CurrentPageReference} from 'lightning/navigation';
+
+export default class NavigateToHomePagePractice extends NavigationMixin(LightningElement) {
+
+    @wire(CurrentPageReference)
+    pageRef;
+
+    connectedCallback() 
+    {
+        //alert('hi');
+        console.log(JSON.stringify(this.pageRef));
+    }
+
+    handleNavigateToHome()
+    {
+        this[NavigationMixin.Navigate]({
+            type:'standard__namedPage',
+            attributes:{
+                pageName:'home'
+            }
+        });
+    }
+    handleNavigateToChatter()
+    {
+        this[NavigationMixin.Navigate]({
+            type:'standard__namedPage',
+            attributes:{
+                pageName:'chatter'
+            }
+        });
+    }
+    handleNavigateToNewRecord()
+    {
+        this[NavigationMixin.Navigate]({
+            type:'standard__objectPage',
+            attributes:{
+                objectApiName:'Account',
+                actionName:'new'
+            }
+        });
+    }
+    handleNavigateToNewRecordWithDefaultValues()
+    {
+        const defaultValues = encodeDefaultFieldValues({
+            Name:'Rohit Sisodia',
+            Rating:'Hot'
+        });
+        this[NavigationMixin.Navigate]({
+            type:'standard__objectPage',
+            attributes:{
+                objectApiName:'Account',
+                actionName:'new'
+            },
+            state:{
+                defaultFieldValues:defaultValues
+            }
+        });
+    }
+    handleNavigateToList()
+    {
+        this[NavigationMixin.Navigate]({
+            type:'standard__objectPage',
+            attributes:{
+                objectApiName:'Account',
+                actionName:'list'
+            },
+            state:{
+                filterName:'Recent'
+            }
+        });
+    }
+    handleNavigateToFiles()
+    {
+        this[NavigationMixin.Navigate]({
+            type:'standard__objectPage',
+            attributes:{
+                objectApiName:'ContentDocument',
+                actionName:'home'
+            }
+        });
+    }
+    handleNavigateToRPV(){
+        this[NavigationMixin.Navigate]({
+            type:'standard__recordPage',
+            attributes:{
+                recordId:'0015g00000wLV36AAG',
+                objectApiName:'Account',
+                actionName:'view'
+            }
+        });
+    }
+    handleNavigateToRPE()
+    {
+        this[NavigationMixin.Navigate]({
+            type:'standard__recordPage',
+            attributes:{
+                recordId:'0015g00000wLV36AAG',
+                objectApiName:'Account',
+                actionName:'edit'
+            }
+        });
+    }
+    handleNavigateTab()
+    {
+        this[NavigationMixin.Navigate]({
+            type:'standard__navItemPage',
+            attributes:{
+                apiName:'Beer_Explorer'
+            }
+        });
+    }
+    handleNavigateRecRelationship()
+    {
+        this[NavigationMixin.Navigate]({
+            type:'standard__recordRelationshipPage',
+            attributes:{
+                recordId:'0015g00000wLV36AAG',
+                objectApiName:'Account',
+                relationshipApiName:'Contacts',
+                actionName:'view'
+            }
+        });
+    }
+    handleNavigateWebPage()
+    {
+        this[NavigationMixin.Navigate]({
+            type:'standard__webPage',
+            attributes:{
+                url:'https://www.youtube.com/'
+            }
+        });
+    }
+}

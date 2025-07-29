@@ -1,0 +1,37 @@
+<template>
+    <div>
+        <lightning-input type="text" label="Enter some text1" id="form1" placeholder="Enter Text" onchange={handlechange}></lightning-input>
+    </div>
+    <div>
+        <p>The Value of Input Text form1 {form1}</p>
+    </div>
+    <div>
+        <lightning-input type="text" label="Enter some text2" id="form2" placeholder="Enter Text" onchange={handlechange}></lightning-input>
+    </div>
+    <div>
+        <p>The Value of Input Text form2 {form2}</p>
+    </div> 
+
+    <div>
+        <lightning-input type="checkbox" label="Enter some text3" id="form3" checked={form3} onchange={handlechange}></lightning-input>
+    </div>
+    <div>
+        <p>The Value of Input Text form2 {form3}</p>
+    </div> 
+    <div>
+        <lightning-input type="checkbox" label="Enter some text4" id="form4" checked={form4} value={form4} onchange={handlechange}></lightning-input>
+    </div>
+    <div>
+        <p>The Value of Input Text form2 {form4}</p>
+    </div> 
+    <div if:true={form3}>
+        <p>form3</p>
+    </div>
+    <div if:true={form4}>
+        <p>form4</p>
+        <div>
+            <lightning-input type="radio" value="Yes" id="form11" label="Yes" onchange={handleinput}></lightning-input>
+            <lightning-input type="radio" value="NO" id="form12" label="NO" onchange={handleinput}></lightning-input>
+        </div>
+    </div>
+</template>

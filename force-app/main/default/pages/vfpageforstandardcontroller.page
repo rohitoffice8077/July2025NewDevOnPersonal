@@ -1,0 +1,7 @@
+<apex:page standardController="Account">
+  <apex:pageblock title="block1">
+    <apex:pageblocksection title="section1">
+        <apex:outputField value="{! account.name}"/>
+      </apex:pageblocksection>
+    </apex:pageblock>
+</apex:page>

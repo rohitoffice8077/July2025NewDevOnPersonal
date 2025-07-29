@@ -1,0 +1,20 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction,lightning:availableForFlowScreens" access="global" >
+    <aura:attribute name="var1" type="string" default="testing default value"/>
+    <aura:attribute name="nameList" type="List" default="['Rohit','Ranu','RAM']"/>
+    <aura:handler name="init" value="{!this}" action="{!c.myass}"/>
+    <aura:attribute name="jsdata" type="Object"/>
+    <aura:attribute name="msg" type="String"/>
+    <aura:attribute name="msg2" type="string"/>
+    <aura:attribute name="userData" type="WrapperDemo.WrapperTest"/>
+    
+    <h1>Hello Everyone I am {!v.var1}</h1>
+    <h2>{!v.nameList[0]} , {!v.nameList[1]} , {!v.nameList[2]}</h2>
+    <h3>{!v.jsdata}</h3>
+    <h4>{!v.userData.mystring1}-{!v.userData.myInteger}</h4>
+    <h5> Hello :{!v.msg} </h5>
+    <h5>Hello:{!v.msg2}</h5>
+    <lightning:button label="Click Me" onclick="{!c.handleClick}"/>
+    <br/>
+        <lightning:button label="Click Me 2" onclick="{!c.handleClick2}"/>
+	
+</aura:component>

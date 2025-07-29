@@ -1,0 +1,9 @@
+<apex:page >
+    <apex:panelbar >
+    <apex:panelBarItem label="Iteam1" onenter="alert('entering in iteam1')" onleave="alert('leaving the iteam1')">hiiii myself rohit sisodia</apex:panelBarItem>
+    <apex:panelBarItem label="Iteam2" onenter="alert('entering in iteam2')" onleave="alert('leaving the iteam2')">i am good at coding</apex:panelBarItem>
+    <apex:panelBarItem label="Iteam3" onenter="alert('entering in iteam3')" onleave="alert('leaving the iteam3')">so i am software engineer</apex:panelBarItem>
+    <apex:panelBarItem label="Iteam4" onenter="alert('entering in iteam4')" onleave="alert('leaving the iteam4')">i have done my b tech from </apex:panelBarItem>
+    <apex:panelBarItem label="Iteam5" onenter="alert('entering in iteam5')" onleave="alert('leaving the iteam5')">Amity University</apex:panelBarItem>
+    </apex:panelbar>
+</apex:page>

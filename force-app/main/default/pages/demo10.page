@@ -1,0 +1,40 @@
+<apex:page controller="contactPaginationCtrl" tabStyle="Contact">
+
+
+<apex:form >
+
+<apex:actionFunction name="refreshPageSize" action="{!refreshPageSize}" reRender="pbId"/>
+
+<apex:inputText value="{!searchKey}" label="Input"/>
+<apex:commandButton value="Search records" reRender="pbId" action="{!search}" />
+
+<apex:pageBlock id="pbId">
+<apex:pageBlockSection title="Contacts Records" columns="2" collapsible="false">
+<apex:pageBlockTable value="{! contacts}" var="con">
+<apex:column >
+<apex:facet name="header">Action</apex:facet>
+<apex:outputLink title="" value="">Edit</apex:outputLink>&nbsp;|&nbsp;
+<a href="">Del</a>
+</apex:column>
+
+<apex:column value="{! con.Name}"/>
+<apex:column value="{! con.Email}"/>
+<apex:column value="{!con.phone}" />
+</apex:pageBlockTable>
+</apex:pageBlockSection>
+
+<apex:panelGrid columns="8">
+<apex:selectList value="{!size}" multiselect="false" size="1" onchange="refreshPageSize();">
+<apex:selectOptions value="{!paginationSizeOpt}"/>
+</apex:selectList>
+<apex:commandButton reRender="pbId" action="{!setCon.first}" value="First"/>
+<apex:commandButton reRender="pbId" action="{!setCon.previous}" value="Prev"/>
+<apex:commandButton reRender="pbId" action="{!setCon.next}" value="Next"/>
+<apex:commandButton reRender="pbId" action="{!setCon.last}" value="Last"/>
+</apex:panelGrid>
+
+</apex:pageBlock>
+</apex:form>
+
+
+</apex:page>

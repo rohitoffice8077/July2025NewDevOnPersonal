@@ -1,0 +1,24 @@
+<template>
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered" aria-label="Example table of Opportunities with vertical borders">
+        <thead>
+            <tr class="slds-hint-parent">
+            <th class="" scope="col"><div class="slds-truncate" title="Account Id">Id</div></th>
+            <th class="" scope="col"><div class="slds-truncate" title="Account Name">Name</div></th>
+            <th class="" scope="col"><div class="slds-truncate" title="Annual Revenue">Annual Revenue</div></th>
+            <th class="" scope="col"><div class="slds-truncate" title="Phone">Phone</div></th>
+            <th class="" scope="col"><div class="slds-truncate" title="Industry">Industry</div></th>
+            </tr>
+        </thead>
+        <template for:each={result} for:item="acc">
+        <tbody key={acc.Id}>
+            <tr class="slds-hint-parent">
+                <td><a href="#">{acc.Id}</a></td>
+                <td>{acc.Name}</td>
+                <td>{acc.AnnualRevenue}</td>
+                <td>{acc.Phone}</td>
+                <td>{acc.Industry}</td>
+            </tr>
+        </tbody>
+        </template>
+    </table>  
+</template>

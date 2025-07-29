@@ -1,0 +1,110 @@
+<apex:page standardController="Quote" contentType="application/pdf" showHeader="false" sidebar="false" renderAs="pdf">
+    <apex:form >         
+        <apex:pageBlock >
+            
+            <apex:pageBlockSection columns="2">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Company Address &nbsp;</apex:outputLabel>
+                    <apex:outputText >{!Quote.Opportunity.Account.BillingStreet},
+                        {!Quote.Opportunity.Account.BillingCity}, 
+                        {!Quote.Opportunity.Account.BillingState},
+                        {!Quote.Opportunity.Account.BillingPostalCode}
+                    </apex:outputText>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Created Date &nbsp;</apex:outputLabel>
+                    <apex:outputText >{!Quote.CreatedDate}</apex:outputText>
+                </apex:pageBlockSectionItem>
+                <br/><br/>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Expiration Date &nbsp;</apex:outputLabel>
+                    <apex:outputText >{!Quote.ExpirationDate}</apex:outputText>
+                </apex:pageBlockSectionItem>
+                <br/>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Quote Number &nbsp;</apex:outputLabel>
+                    <apex:outputText >{!Quote.QuoteNumber}</apex:outputText>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Prepared By &nbsp;</apex:outputLabel>
+                    <apex:outputText >{!Quote.CreatedBy.Name}</apex:outputText>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Contact Name &nbsp;</apex:outputLabel>
+                    <apex:outputText >{!Quote.ContactId}</apex:outputText>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Email &nbsp;</apex:outputLabel>
+                    <apex:outputText >{!Quote.CreatedBy.Email}</apex:outputText>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Email &nbsp;</apex:outputLabel>
+                    <apex:outputText >{!Quote.Email}</apex:outputText>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Bill To Name &nbsp;</apex:outputLabel>
+                    <apex:outputText >{!Quote.BillingName}</apex:outputText>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Ship To Name &nbsp;</apex:outputLabel>
+                    <apex:outputText >{!Quote.ShippingName}</apex:outputText>
+                </apex:pageBlockSectionItem>
+                
+            </apex:pageBlockSection>
+            <br/><br/>
+            <apex:pageBlockSection columns="2">
+                <br/>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Subtotal &nbsp;</apex:outputLabel>
+                    <apex:outputText >{!Quote.Subtotal}</apex:outputText>
+                </apex:pageBlockSectionItem>
+                <br/>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Discount &nbsp;</apex:outputLabel>
+                    <apex:outputText >{!Quote.Discount}</apex:outputText>
+                </apex:pageBlockSectionItem>
+                <br/>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Total Price &nbsp;</apex:outputLabel>
+                    <apex:outputText >{!Quote.TotalPrice}</apex:outputText>
+                </apex:pageBlockSectionItem>
+                <br/>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Grand Total &nbsp;</apex:outputLabel>
+                    <apex:outputText >{!Quote.GrandTotal}</apex:outputText>
+                </apex:pageBlockSectionItem>
+                
+            </apex:pageBlockSection>
+            <apex:outputPanel styleClass="red">
+                <apex:pageBlockSection title="Quote Acceptance Information">
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Signature &nbsp;</apex:outputLabel>
+                        <apex:outputText >..............................</apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    <br/>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Name &nbsp;</apex:outputLabel>
+                        <apex:outputText >..............................</apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    <br/>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Title &nbsp;</apex:outputLabel>
+                        <apex:outputText >..............................</apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    <br/>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Date &nbsp;</apex:outputLabel>
+                        <apex:outputText >..............................</apex:outputText>
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

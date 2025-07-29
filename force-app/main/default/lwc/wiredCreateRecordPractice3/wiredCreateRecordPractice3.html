@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Create Account Record">
+        <div class="slds-m-left_large">
+            <lightning-input
+            name="Name"
+            label="Name"
+            onchange={handleChange}
+            >
+            </lightning-input>
+            <lightning-input
+            label="Rating"
+            name="Rating"
+            onchange={handleChange}
+            ></lightning-input>
+            <lightning-input
+            label="Industry"
+            name="Industry"
+            onchange={handleChange}
+            ></lightning-input>
+        </div>
+        <lightning-button variant="Neutral" label="Save" onclick={handleSave}></lightning-button>
+    </lightning-card>
+    
+</template>

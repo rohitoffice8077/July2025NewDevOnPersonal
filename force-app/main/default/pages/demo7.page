@@ -1,0 +1,21 @@
+<apex:page >
+    <apex:form >
+    <apex:pageblock title="First Block">
+    <apex:pageblocksection title="first section">
+        <apex:pageblocksectionitem >Rohit</apex:pageblocksectionitem>
+        <apex:pageblocksectionitem >aman</apex:pageblocksectionitem>
+        <apex:pageblocksectionitem >ranu</apex:pageblocksectionitem>
+        </apex:pageblocksection>
+    
+    <apex:pageblocksection title="second section">
+       <apex:pageblocksectionitem >sisodia</apex:pageblocksectionitem> 
+       <apex:pageblocksectionitem >kumar</apex:pageblocksectionitem> 
+        <apex:pageblocksectionitem >singh</apex:pageblocksectionitem>
+        </apex:pageblocksection>
+        <apex:pageBlockButtons >
+        <apex:commandButton value="save"/>
+        <apex:commandButton value="cancel"/>    
+        </apex:pageBlockButtons>
+    </apex:pageblock>
+</apex:form>
+</apex:page>

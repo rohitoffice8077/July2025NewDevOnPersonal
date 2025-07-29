@@ -1,0 +1,43 @@
+<apex:page standardcontroller="opportunity" renderAs="pdf">
+
+<h1>Invoice</h1>
+
+<table>
+  <tr>
+    <th>Item</th>
+    <th>Quantity</th>
+    <th>Unit Price</th>
+    <th>Total</th>
+  </tr>
+
+  <apex:repeat value="{!opportunity.amount}" var="item">
+    <tr>
+      <td>{!opportunity.amount}</td>
+      <td>{!opportunity.amount}</td>
+      <td>{!opportunity.amount}</td>
+      <td>{!opportunity.amount}</td>
+    </tr>
+  </apex:repeat>
+
+  <tr>
+    <td colspan="3">Subtotal</td>
+    <td>{!opportunity.amount}</td>
+  </tr>
+
+  <tr>
+    <td colspan="3">Tax</td>
+    <td>{!opportunity.amount}</td>
+  </tr>
+
+  <tr>
+    <td colspan="3">Shipping</td>
+    <td>{!opportunity.amount}</td>
+  </tr>
+
+  <tr>
+    <td colspan="3">Total</td>
+    <td>{!opportunity.amount}</td>
+  </tr>
+
+</table>
+</apex:page>

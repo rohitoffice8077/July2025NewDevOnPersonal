@@ -1,0 +1,26 @@
+<template>
+    <lightning-card  title="How to use for loop in Lwc" icon-name="utility:user">
+        <div style="padding:10px">
+            <table >
+                <tr >
+                    <td>
+                        Student Name
+                    </td>
+                    <td>
+                        Class
+                    </td>
+                    <td>
+                        fees
+                    </td>
+                </tr>
+                <template for:each={students} for:item="stu">
+                    <tr key={stu.id}>
+                        <td>{stu.Name}</td>
+                        <td>{stu.Class}</td>
+                        <td>{stu.Fee}</td>
+                    </tr>
+                </template>
+            </table>
+        </div>    
+    </lightning-card>
+</template>

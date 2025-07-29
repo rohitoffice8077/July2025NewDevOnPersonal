@@ -1,0 +1,23 @@
+<template>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>CreatedDate</th>
+                <th>Owner</th>
+                <th>Active</th>
+            </tr>
+        </thead>
+        <tbody>
+            <template for:each={accounts} for:item="account">
+                <tr key={account.Id}>
+                    <td>{account.Name}</td>
+                    <td>{account.Createdate}</td>
+                    <td>{account.Owner.Name}</td>
+                    <td if:true={account.IsActiveCustom__c}><lightning-icon icon-name="action:approval" alternative-text="Approved" title="Approved"></lightning-icon></td>
+                    <td if:false={account.IsActiveCustom__c}><lightning-icon icon-name="utility:crossfilter"></lightning-icon></td>
+                </tr>
+            </template>
+        </tbody>
+    </table>
+</template>

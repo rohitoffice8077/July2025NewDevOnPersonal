@@ -1,0 +1,10 @@
+<apex:page standardController="lead" >
+ <apex:pageBlock >
+    <apex:pageBlockSection >
+     firstname : {! lead.firstname}
+        lastname :{! lead.lastname}
+        company:{!lead.company}
+        title :{!lead.title}
+     </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>
