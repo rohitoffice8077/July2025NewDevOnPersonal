@@ -8,7 +8,7 @@ export default class CustomTableWithAccountData extends LightningElement {
     {
         if(data)
         {
-            console.log('Getting Account Result successfully');
+            console.log('Getting Account Result successfully yes');
             this.result=data;
         }
         else if(error)

@@ -6,7 +6,7 @@ public with sharing class AccountController {
     }
     @AuraEnabled
     public static list<Account>getAccList() {
-        return([SELECT Id,Name,	City__c,Industry,Rating FROM Account order by createddate desc limit 10]);
+        return([SELECT Id,Name,	City__c,Industry,Rating FROM Account order by createddate desc limit 100]);
 
     }
       
